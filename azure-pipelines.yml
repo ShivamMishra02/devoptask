@@ -9,8 +9,9 @@ resources:
 - repo: self
 
 variables:
-  tag: '$(Build.BuildId)'
-
+- group: Apr-devshivam
+- name: alpha
+  value:$[variables.aalpha]
 stages:
 - stage: Build
   displayName: Build image

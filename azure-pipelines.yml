@@ -10,7 +10,7 @@ resources:
 
 variables:
 - group: Apr-devshivam
-- name: alpha
+- name: my-passed-variable
   value: $[variables.alpha]
 
 
@@ -23,7 +23,7 @@ stages:
     pool:
       vmImage: ubuntu-latest
     steps:
-    - script: echo $(alpha) # uses macro syntax
+    - script: echo $(my-passed-variable) # uses macro syntax
 
     - task: Docker@2
       displayName: Build an image
